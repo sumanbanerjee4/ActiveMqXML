@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 
-import activeMq.consumerProvider.ServiceProvider;
+import activeMq.serviceProvider.ServiceRequest;
 
 @Configuration
 @EnableJms
@@ -35,7 +35,7 @@ public class ReceiverConfig {
   }
 
   @Bean
-  public ServiceProvider receiver() {
-    return new ServiceProvider();
+  public ServiceRequest receiver() {
+    return new ServiceRequest();
   }
 }

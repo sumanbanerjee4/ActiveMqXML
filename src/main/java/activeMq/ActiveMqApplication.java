@@ -1,20 +1,24 @@
 package activeMq;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
-import activeMq.scanRequest.ScanRequest;
+import activeMq.scanRequest.SimulateScanRequest;
 @EnableConfigurationProperties
 @SpringBootApplication
 public class ActiveMqApplication implements CommandLineRunner {
+	private static final Logger logger = LoggerFactory.getLogger(ActiveMqApplication.class);
+	
 	@Autowired
-	ScanRequest s;
+	SimulateScanRequest s;
 	public static void main(String[] args) {
 		SpringApplication.run(ActiveMqApplication.class, args);
-		
+		logger.info("Aplication started");
 	}
 
 	@Override

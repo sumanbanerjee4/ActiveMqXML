@@ -1,0 +1,270 @@
+LOGBACK: No context given for c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@2051853139
+2019-11-24 20:02:43.105  INFO 5212 --- [           main] activeMq.ActiveMqApplication             : Starting ActiveMqApplication on Lenovo-PC with PID 5212 (started by Lenovo in D:\WORK\java all\Broker\activeMq)
+2019-11-24 20:02:43.111  INFO 5212 --- [           main] activeMq.ActiveMqApplication             : No active profile set, falling back to default profiles: default
+2019-11-24 20:02:44.420  INFO 5212 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-24 20:02:44.546  INFO 5212 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108ms. Found 2 repository interfaces.
+2019-11-24 20:02:45.148  INFO 5212 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-24 20:02:45.589  INFO 5212 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-11-24 20:02:45.605  INFO 5212 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-24 20:02:45.605  INFO 5212 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-24 20:02:45.808  INFO 5212 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-24 20:02:45.808  INFO 5212 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2587 ms
+2019-11-24 20:02:45.885  INFO 5212 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-24 20:02:46.166  INFO 5212 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-24 20:02:46.180  INFO 5212 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2_console'. Database available at 'jdbc:h2:file:~/h2/hotscan'
+2019-11-24 20:02:46.434  INFO 5212 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-24 20:02:46.583  INFO 5212 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-24 20:02:47.049  INFO 5212 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-24 20:02:47.273  INFO 5212 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table qmodel if exists
+Hibernate: drop table scan_request_model if exists
+Hibernate: create table qmodel (profile_id varchar(255) not null, q_name varchar(255), primary key (profile_id))
+Hibernate: create table scan_request_model (trns_ref integer not null, date timestamp, profile_id varchar(255), primary key (trns_ref))
+2019-11-24 20:02:48.454  INFO 5212 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-24 20:02:48.468  INFO 5212 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-24 20:02:49.287  WARN 5212 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-24 20:02:49.526  INFO 5212 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-24 20:02:50.243  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.251  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.252  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-55395-1574602513893-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-55395-1574602513893-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574602515025, arrival = 0, brokerInTime = 1574602515026, brokerOutTime = 1574605970208, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@36ae395d, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.266  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.266  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.266  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-55582-1574602829285-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-55582-1574602829285-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574602830615, arrival = 0, brokerInTime = 1574602830615, brokerOutTime = 1574605970237, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@45032ee4, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.271  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.271  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.271  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-55636-1574603007524-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-55636-1574603007524-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574603008835, arrival = 0, brokerInTime = 1574603008836, brokerOutTime = 1574605970245, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@31e572eb, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.272  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.273  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.273  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-55730-1574603494911-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-55730-1574603494911-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574603496029, arrival = 0, brokerInTime = 1574603496029, brokerOutTime = 1574605970245, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@17f138b7, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.278  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.278  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.278  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-55751-1574603697584-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-55751-1574603697584-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574603698581, arrival = 0, brokerInTime = 1574603698581, brokerOutTime = 1574605970246, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@6b06dc6e, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.281  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.281  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.281  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-55918-1574603894807-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-55918-1574603894807-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574603896033, arrival = 0, brokerInTime = 1574603896033, brokerOutTime = 1574605970247, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@372ebbe4, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.282  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.282  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.283  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-55963-1574603988914-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-55963-1574603988914-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574603990037, arrival = 0, brokerInTime = 1574603990037, brokerOutTime = 1574605970247, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@2dc6f5c0, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.285  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.287  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.287  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-56007-1574604108696-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-56007-1574604108696-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574604110413, arrival = 0, brokerInTime = 1574604110413, brokerOutTime = 1574605970248, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@33ec444f, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.289  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.289  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.289  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-56118-1574604214504-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-56118-1574604214504-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574604215685, arrival = 0, brokerInTime = 1574604215685, brokerOutTime = 1574605970249, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@6ed40bf0, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.293  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.293  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.293  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-56765-1574604772855-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-56765-1574604772855-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574604774074, arrival = 0, brokerInTime = 1574604774074, brokerOutTime = 1574605970249, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@2ce77c55, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.295  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.295  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.295  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-56936-1574605090449-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-56936-1574605090449-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574605091767, arrival = 0, brokerInTime = 1574605091767, brokerOutTime = 1574605970249, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@3695e4fc, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.296  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.296  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.307  INFO 5212 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2019-11-24 20:02:50.312  INFO 5212 --- [           main] activeMq.ActiveMqApplication             : Started ActiveMqApplication in 8.155 seconds (JVM running for 10.867)
+2019-11-24 20:02:50.314  INFO 5212 --- [           main] a.scanRequest.SimulateScanRequest        : sending message='<?xml version="1.0"?>
+<HotScan>
+<ProfileID>
+     AA
+ </ProfileID>
+<TransRef>
+     0001
+ </TransRef>
+<ScanData>AnyData</ScanData>
+</HotScan>'
+2019-11-24 20:02:50.296  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-57177-1574605270769-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-57177-1574605270769-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574605272538, arrival = 0, brokerInTime = 1574605272538, brokerOutTime = 1574605970250, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@670a105d, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.335  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.335  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.335  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-57256-1574605408419-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-57256-1574605408419-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574605409655, arrival = 0, brokerInTime = 1574605409655, brokerOutTime = 1574605970250, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@29cf1cc7, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.339  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.340  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.340  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-57307-1574605471863-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-57307-1574605471863-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574605473159, arrival = 0, brokerInTime = 1574605473160, brokerOutTime = 1574605970250, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@3eddc87f, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.341  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:50.341  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:50.341  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-57577-1574605864414-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-57577-1574605864414-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574605865560, arrival = 0, brokerInTime = 1574605865560, brokerOutTime = 1574605970251, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@27f6795c, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.382  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.ServiceRequest  : -------------------------------Request Flow---------------------------------
+2019-11-24 20:02:50.382  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.ServiceRequest  : Listening on Q1
+2019-11-24 20:02:50.382  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.ServiceRequest  : Request Recieved from System 
+2019-11-24 20:02:50.453  INFO 5212 --- [           main] activeMq.ActiveMqApplication             : Aplication started
+2019-11-24 20:02:50.646  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.ServiceRequest  : Persisting Request data in DB 
+Hibernate: select scanreques0_.trns_ref as trns_ref1_1_0_, scanreques0_.date as date2_1_0_, scanreques0_.profile_id as profile_3_1_0_ from scan_request_model scanreques0_ where scanreques0_.trns_ref=?
+Hibernate: insert into scan_request_model (date, profile_id, trns_ref) values (?, ?, ?)
+2019-11-24 20:02:50.821  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.ServiceRequest  : Sending message to Q2='<?xml version="1.0"?>
+<ProfileId>
+     AA
+ </ProfileId>    TransRef :  1'
+2019-11-24 20:02:50.824  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.ServiceRequest  : setting standard JMS headers before sending
+2019-11-24 20:02:50.828  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.Consumer        : -------------------------------Consumer---------------------------------
+2019-11-24 20:02:50.828  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.Consumer        : Listening on Q2
+2019-11-24 20:02:50.828  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.Consumer        : received message='ActiveMQTextMessage {commandId = 7, responseRequired = true, messageId = ID:Lenovo-PC-57694-1574605969962-3:1:1:2:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-57694-1574605969962-3:1:1:2, destination = queue://Q2, transactionId = null, expiration = 0, timestamp = 1574605970825, arrival = 0, brokerInTime = 1574605970825, brokerOutTime = 1574605970827, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@5efbf5ef, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<ProfileId>
+     AA
+ </ProfileId>}'
+1
+2019-11-24 20:02:50.829  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.Consumer        : Sending message to Q3
+2019-11-24 20:02:50.829  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.Consumer        : sending message='<?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>    CorrelationID : 1'
+2019-11-24 20:02:50.905  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.Consumer        : setting standard JMS headers before sending
+2019-11-24 20:02:50.910  INFO 5212 --- [enerContainer-1] a.serviceProvider.ServiceResponse        : -------------------------------Response Flow---------------------------------
+2019-11-24 20:02:50.910  INFO 5212 --- [enerContainer-1] a.serviceProvider.ServiceResponse        : Listening on Q3
+2019-11-24 20:02:50.910  INFO 5212 --- [enerContainer-1] a.serviceProvider.ServiceResponse        : Received Q3 message='ActiveMQTextMessage {commandId = 10, responseRequired = true, messageId = ID:Lenovo-PC-57694-1574605969962-3:1:2:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-57694-1574605969962-3:1:2:1, destination = queue://Q3, transactionId = null, expiration = 0, timestamp = 1574605970906, arrival = 0, brokerInTime = 1574605970906, brokerOutTime = 1574605970908, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@3d5f5436, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-11-24 20:02:50.910  INFO 5212 --- [enerContainer-1] a.serviceProvider.ServiceResponse        : CorrelationID of Request : 
+Hibernate: select scanreques0_.trns_ref as trns_ref1_1_, scanreques0_.date as date2_1_, scanreques0_.profile_id as profile_3_1_ from scan_request_model scanreques0_ where scanreques0_.trns_ref=?
+2019-11-24 20:02:51.181  INFO 5212 --- [enerContainer-1] a.serviceProvider.ServiceResponse        : ProfileId of the Requested System : 
+Hibernate: select qmodel0_.profile_id as profile_1_0_, qmodel0_.q_name as q_name2_0_ from qmodel qmodel0_ where qmodel0_.profile_id=?
+2019-11-24 20:02:51.190  INFO 5212 --- [enerContainer-1] a.serviceProvider.ServiceResponse        : Sending Data to designated Queue
+2019-11-24 20:02:51.191  INFO 5212 --- [enerContainer-1] a.serviceProvider.ServiceResponse        : Q4
+2019-11-24 20:02:51.196  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : -------------------------------FinalConsumer---------------------------------
+2019-11-24 20:02:51.196  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Listening on Q4
+2019-11-24 20:02:51.196  INFO 5212 --- [enerContainer-1] activeMq.serviceProvider.FinalConsumer   : Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-57694-1574605969962-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-57694-1574605969962-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574605971192, arrival = 0, brokerInTime = 1574605971193, brokerOutTime = 1574605971194, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@413102ed, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-Nov-24 20:12:49.902 o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-Nov-24 20:12:50.744 o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-Nov-24 20:12:50.860 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-Nov-24 20:12:50.868 c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-Nov-24 20:12:51.406 c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-Nov-24 20:13:52.669 a.ActiveMqApplication - Starting ActiveMqApplication on Lenovo-PC with PID 4408 (started by Lenovo in D:\WORK\java all\Broker\activeMq)
+2019-Nov-24 20:13:52.677 a.ActiveMqApplication - No active profile set, falling back to default profiles: default
+2019-Nov-24 20:13:54.069 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-Nov-24 20:13:54.202 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113ms. Found 2 repository interfaces.
+2019-Nov-24 20:13:54.813 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-Nov-24 20:13:55.225 o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2019-Nov-24 20:13:55.241 o.a.c.c.StandardService - Starting service [Tomcat]
+2019-Nov-24 20:13:55.241 o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-Nov-24 20:13:55.439 o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2019-Nov-24 20:13:55.440 o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 2625 ms
+2019-Nov-24 20:13:55.514 c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2019-Nov-24 20:13:55.770 c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2019-Nov-24 20:13:55.784 o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2_console'. Database available at 'jdbc:h2:file:~/h2/hotScan'
+2019-Nov-24 20:13:56.024 o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-Nov-24 20:13:56.162 o.h.Version - HHH000412: Hibernate Core {5.4.8.Final}
+2019-Nov-24 20:13:56.641 o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-Nov-24 20:13:56.870 o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-Nov-24 20:13:58.117 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-Nov-24 20:13:58.133 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-Nov-24 20:13:59.039 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-Nov-24 20:13:59.304 o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-Nov-24 20:14:01.186 o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+2019-Nov-24 20:14:01.189 a.ActiveMqApplication - Started ActiveMqApplication in 9.352 seconds (JVM running for 12.452)
+2019-Nov-24 20:14:01.191 a.s.SimulateScanRequest - sending message='<?xml version="1.0"?>
+<HotScan>
+<ProfileID>
+     AA
+ </ProfileID>
+<TransRef>
+     0001
+ </TransRef>
+<ScanData>AnyData</ScanData>
+</HotScan>'
+2019-Nov-24 20:14:01.312 a.s.ServiceRequest - -------------------------------Request Flow---------------------------------
+2019-Nov-24 20:14:01.313 a.s.ServiceRequest - Listening on Q1
+2019-Nov-24 20:14:01.313 a.s.ServiceRequest - Request Recieved from System 
+2019-Nov-24 20:14:01.355 a.ActiveMqApplication - Aplication started
+2019-Nov-24 20:14:01.587 a.s.ServiceRequest - Persisting Request data in DB 
+2019-Nov-24 20:14:01.733 a.s.ServiceRequest - Sending message to Q2='<?xml version="1.0"?>
+<ProfileId>
+     AA
+ </ProfileId>    TransRef :  1'
+2019-Nov-24 20:14:01.737 a.s.ServiceRequest - setting standard JMS headers before sending
+2019-Nov-24 20:14:01.740 a.s.Consumer - -------------------------------Consumer---------------------------------
+2019-Nov-24 20:14:01.740 a.s.Consumer - Listening on Q2
+2019-Nov-24 20:14:01.740 a.s.Consumer - received message='ActiveMQTextMessage {commandId = 7, responseRequired = true, messageId = ID:Lenovo-PC-58355-1574606639789-3:1:1:2:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-58355-1574606639789-3:1:1:2, destination = queue://Q2, transactionId = null, expiration = 0, timestamp = 1574606641737, arrival = 0, brokerInTime = 1574606641737, brokerOutTime = 1574606641738, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@1afb40d5, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<ProfileId>
+     AA
+ </ProfileId>}'
+2019-Nov-24 20:14:01.747 a.s.Consumer - Sending message to Q3
+2019-Nov-24 20:14:01.747 a.s.Consumer - sending message='<?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>    CorrelationID : 1'
+2019-Nov-24 20:14:01.898 a.s.Consumer - setting standard JMS headers before sending
+2019-Nov-24 20:14:02.119 a.s.ServiceResponse - -------------------------------Response Flow---------------------------------
+2019-Nov-24 20:14:02.120 a.s.ServiceResponse - Listening on Q3
+2019-Nov-24 20:14:02.120 a.s.ServiceResponse - Received Q3 message='ActiveMQTextMessage {commandId = 10, responseRequired = true, messageId = ID:Lenovo-PC-58355-1574606639789-3:1:2:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-58355-1574606639789-3:1:2:1, destination = queue://Q3, transactionId = null, expiration = 0, timestamp = 1574606641898, arrival = 0, brokerInTime = 1574606641899, brokerOutTime = 1574606642118, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@5277abfe, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-Nov-24 20:14:02.121 a.s.ServiceResponse - CorrelationID of Request : 
+2019-Nov-24 20:14:02.390 a.s.ServiceResponse - ProfileId of the Requested System : 
+2019-Nov-24 20:14:02.398 a.s.ServiceResponse - Sending Data to designated Queue
+2019-Nov-24 20:14:02.399 a.s.ServiceResponse - Q4
+2019-Nov-24 20:14:02.429 a.s.FinalConsumer - -------------------------------FinalConsumer---------------------------------
+2019-Nov-24 20:14:02.429 a.s.FinalConsumer - Listening on Q4
+2019-Nov-24 20:14:02.429 a.s.FinalConsumer - Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-58355-1574606639789-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-58355-1574606639789-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574606642401, arrival = 0, brokerInTime = 1574606642401, brokerOutTime = 1574606642428, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@196c018e, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-Nov-24 20:39:23.410 a.ActiveMqApplication - Starting ActiveMqApplication on Lenovo-PC with PID 4192 (started by Lenovo in D:\WORK\java all\Broker\activeMq)
+2019-Nov-24 20:39:23.416 a.ActiveMqApplication - No active profile set, falling back to default profiles: default
+2019-Nov-24 20:39:24.703 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-Nov-24 20:39:24.831 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110ms. Found 2 repository interfaces.
+2019-Nov-24 20:39:25.440 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-Nov-24 20:39:25.882 o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2019-Nov-24 20:39:25.900 o.a.c.c.StandardService - Starting service [Tomcat]
+2019-Nov-24 20:39:25.901 o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-Nov-24 20:39:26.105 o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2019-Nov-24 20:39:26.106 o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 2576 ms
+2019-Nov-24 20:39:26.193 c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2019-Nov-24 20:39:26.459 c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2019-Nov-24 20:39:26.471 o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2_console'. Database available at 'jdbc:h2:file:~/h2/hotScanDB'
+2019-Nov-24 20:39:26.712 o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-Nov-24 20:39:26.858 o.h.Version - HHH000412: Hibernate Core {5.4.8.Final}
+2019-Nov-24 20:39:27.339 o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-Nov-24 20:39:27.562 o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-Nov-24 20:39:28.774 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-Nov-24 20:39:28.788 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-Nov-24 20:39:29.638 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-Nov-24 20:39:29.878 o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-Nov-24 20:39:30.743 o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+2019-Nov-24 20:39:30.747 a.ActiveMqApplication - Started ActiveMqApplication in 8.302 seconds (JVM running for 11.107)
+2019-Nov-24 20:39:30.749 a.s.SimulateScanRequest - sending message='<?xml version="1.0"?>
+<HotScan>
+<ProfileID>
+     AA
+ </ProfileID>
+<TransRef>
+     0001
+ </TransRef>
+<ScanData>AnyData</ScanData>
+</HotScan>'
+2019-Nov-24 20:39:30.838 a.s.ServiceRequest - -------------------------------Request Flow---------------------------------
+2019-Nov-24 20:39:30.838 a.s.ServiceRequest - Listening on Q1
+2019-Nov-24 20:39:30.838 a.s.ServiceRequest - Request Recieved from System 
+2019-Nov-24 20:39:30.931 a.ActiveMqApplication - Aplication started
+2019-Nov-24 20:39:31.111 a.s.ServiceRequest - Persisting Request data in DB 
+2019-Nov-24 20:39:31.258 a.s.ServiceRequest - Sending message to Q2='<?xml version="1.0"?>
+<ProfileId>
+     AA
+ </ProfileId>    TransRef :  1'
+2019-Nov-24 20:39:31.284 a.s.ServiceRequest - setting standard JMS headers before sending
+2019-Nov-24 20:39:31.390 a.s.Consumer - -------------------------------Consumer---------------------------------
+2019-Nov-24 20:39:31.391 a.s.Consumer - Listening on Q2
+2019-Nov-24 20:39:31.391 a.s.Consumer - received message='ActiveMQTextMessage {commandId = 7, responseRequired = true, messageId = ID:Lenovo-PC-59182-1574608170322-3:1:1:2:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-59182-1574608170322-3:1:1:2, destination = queue://Q2, transactionId = null, expiration = 0, timestamp = 1574608171284, arrival = 0, brokerInTime = 1574608171285, brokerOutTime = 1574608171389, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@6bd43192, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<ProfileId>
+     AA
+ </ProfileId>}'
+2019-Nov-24 20:39:31.398 a.s.Consumer - Sending message to Q3
+2019-Nov-24 20:39:31.398 a.s.Consumer - sending message='<?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>    CorrelationID : 1'
+2019-Nov-24 20:39:31.727 a.s.Consumer - setting standard JMS headers before sending
+2019-Nov-24 20:39:31.731 a.s.ServiceResponse - -------------------------------Response Flow---------------------------------
+2019-Nov-24 20:39:31.732 a.s.ServiceResponse - Listening on Q3
+2019-Nov-24 20:39:31.733 a.s.ServiceResponse - Received Q3 message='ActiveMQTextMessage {commandId = 10, responseRequired = true, messageId = ID:Lenovo-PC-59182-1574608170322-3:1:2:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-59182-1574608170322-3:1:2:1, destination = queue://Q3, transactionId = null, expiration = 0, timestamp = 1574608171728, arrival = 0, brokerInTime = 1574608171728, brokerOutTime = 1574608171730, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@13f74ef, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'
+2019-Nov-24 20:39:31.734 a.s.ServiceResponse - CorrelationID of Request : 
+2019-Nov-24 20:39:32.008 a.s.ServiceResponse - ProfileId of the Requested System : 
+2019-Nov-24 20:39:32.019 a.s.ServiceResponse - Sending Data to designated Queue
+2019-Nov-24 20:39:32.022 a.s.ServiceResponse - Q4
+2019-Nov-24 20:39:32.078 a.s.FinalConsumer - -------------------------------FinalConsumer---------------------------------
+2019-Nov-24 20:39:32.078 a.s.FinalConsumer - Listening on Q4
+2019-Nov-24 20:39:32.078 a.s.FinalConsumer - Received message='ActiveMQTextMessage {commandId = 14, responseRequired = true, messageId = ID:Lenovo-PC-59182-1574608170322-3:1:1:3:1, originalDestination = null, originalTransactionId = null, producerId = ID:Lenovo-PC-59182-1574608170322-3:1:1:3, destination = queue://Q4, transactionId = null, expiration = 0, timestamp = 1574608172074, arrival = 0, brokerInTime = 1574608172075, brokerOutTime = 1574608172077, correlationId = 1, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@7020e08e, marshalledProperties = null, dataStructure = null, redeliveryCounter = 0, size = 0, properties = null, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = <?xml version="1.0"?>
+<Scanresponse>pass</Scanresponse>}'

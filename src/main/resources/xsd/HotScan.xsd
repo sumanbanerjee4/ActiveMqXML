@@ -5,7 +5,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element name="ProfileID" type="xs:string" />
-        <xs:element name="TransRef" type="xs:unsignedByte" />
+        <xs:element name="TransRef" type="xs:int" />
         <xs:element name="ScanData" type="xs:string" />
       </xs:sequence>
     </xs:complexType>

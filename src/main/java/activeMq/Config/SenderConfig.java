@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.connection.CachingConnectionFactory;
 import org.springframework.jms.core.JmsTemplate;
 
-import activeMq.scanRequest.ScanRequest;
+import activeMq.scanRequest.SimulateScanRequest;
 
 @Configuration
 public class SenderConfig {
@@ -36,7 +36,7 @@ public class SenderConfig {
   }
 
   @Bean
-  public ScanRequest sender() {
-    return new ScanRequest();
+  public SimulateScanRequest sender() {
+    return new SimulateScanRequest();
   }
 }
